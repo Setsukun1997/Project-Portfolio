@@ -5,13 +5,13 @@ body {
   padding: 20px;
 }
 .container {
-  max-width: 500px;
+  max-width: 600px;
   margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
 form input {
   width: 45%;
   padding: 10px;
@@ -39,6 +39,7 @@ li {
 .summary {
   margin-top: 20px;
 }
+
 
 
 
