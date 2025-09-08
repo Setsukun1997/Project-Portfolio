@@ -1,5 +1,4 @@
 body {
-  body {
   background: linear-gradient(to right, #74ebd5, #ACB6E5);
   font-family: 'Segoe UI', sans-serif;
 }
@@ -45,4 +44,5 @@ li {
 .summary {
   margin-top: 20px;
 }
+
 
