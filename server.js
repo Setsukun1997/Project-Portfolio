@@ -5,6 +5,8 @@ const app = express();
 app.use(cors());
 app.use(package.json());
 
+app.use(express.static(path.join(dirname)));
+
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
@@ -17,5 +19,6 @@ app.post('/api/data', (req, res) => {
 app.listen(3000, () => {
   console.log('Server running on https://project-portfolio-8gix.onrender.com/');
 });
+
 
 
