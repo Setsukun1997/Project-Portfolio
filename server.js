@@ -1,21 +1,20 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const db = require('./db');
 
 app.use(cors());
 app.use(express.json());
 
-app.get('/transactions', async (req, res) => {
-  const transactions = await db.getTransactions();
-  res.json(transactions);
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
 });
 
-app.post('/transactions', async (req, res) => {
-  const { description, amount } = req.body;
-  const newTx = await db.addTransaction(description, amount);
-  res.json(newTx);
+app.post('/api/data', (req, res) => {
+  const { name } = req.body;
+  res.json({ message: `Hello, ${name}!` });
 });
 
-app.listen(3000, () => console.log('Server running on http://localhost:3000'));
+app.listen(3000, () => {
+  console.log('Server running on https://project-portfolio-8gix.onrender.com/');
+});
 
