@@ -17,6 +17,8 @@ app.post('/api/data', (req, res) => {
   res.json({ message: `Hello, ${name}!` });
 });
 
-app.listen(3000, () => {
-  console.log('Server running on https://project-portfolio-8gix.onrender.com/);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
+
